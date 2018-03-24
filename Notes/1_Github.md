@@ -53,8 +53,32 @@
         - Good: "Update the footer to copyright information"
         - no why / no how / no and
       - Description: skip a line after message then start
-  - `git diff` show changes of unstaged / uncommited files
+  - `git diff` show changes of unstaged files
   - `.gitignore` file under repo to ignore specified files
+- Create Tag / Branch
+  - `git tag` show tag
+    - `git tag -a v1.0 [<SHA>]` create a tag "v1.0" with comments (creator / date / message) for (optional) particular commit
+    - `git tag -d "v1.0"` remove tag "v1.0"
+    - use `git log` to verify the location of tag (use `--decorate` in older version)
+  - `git branch` show all branches
+    - `git branch <branch_name> [<SHA>]` create a new branch at (optional) particular commit
+    - `git branch -d <branch_name>` delete branch (inactivate) w/o commit
+      - to delete branch with commits, use `-D` instead
+  - `git checkout` switch `HEAD` pointer to a branch, making it as active branch
+    - convert file version to latest version of active branch (it replace all files under commit in previous branch, with that in the new branch)
+    - `git checkout -b <new_branch_name> <create_on_which_branch>`  create a new branch and checkout it
+    - ![Git Branches](../img/git_branch.png)
+  - `git log --oneline --graph --all` shows all branches and commits, also relationships
+  - `git merge`
+    - `git merge <other_branch>` merge a branch into current branch, like `master`
+      - Fast-forward: moving `HEAD` to the latest commit (merge `social-links` to `master)`
+      - Auto-merge: create a commit and merge (merge `sidebar` to `master`)
+      - Merge conflicts: same row has been differently modified in both branches
+        - git stop merging and return a single file, combining conflicting portions from both files, showing conflicts with indicators
+        - update the file and commit it, then merge is completed automatically
+        - you can just commit it and let merge done, but the conflicts will show in your file
+      - ![Git Merge](../img/git_merge.png)
+    - `git reset --hard HEAD^` cancel merge
 
 ## Part 1 Project: Stroop Effect
 
