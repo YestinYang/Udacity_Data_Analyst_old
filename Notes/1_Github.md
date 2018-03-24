@@ -44,8 +44,17 @@
     - share all arguments of `git log`
 - Create commit
   - `git add` 
-  - `git commit` 
-  - `git diff` 
+    - `git add .` to stage all folders and files
+    - `git rm --cached <file>` to unstage
+  - `git commit` open default editor
+    - `git commit -m "commit message"` for short commit with only message
+    - Rules of writing commits
+      - Message: explain the role of submission
+        - Good: "Update the footer to copyright information"
+        - no why / no how / no and
+      - Description: skip a line after message then start
+  - `git diff` show changes of unstaged / uncommited files
+  - `.gitignore` file under repo to ignore specified files
 
 ## Part 1 Project: Stroop Effect
 
