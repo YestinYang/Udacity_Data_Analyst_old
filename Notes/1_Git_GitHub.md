@@ -100,7 +100,7 @@
 1. [Lib of Setting optimized for Git](https://dotfiles.github.io/)
 2. [Udacity style](https://classroom.udacity.com/nanodegrees/nd002-cn-advanced-career/parts/0f916a11-e0ae-4845-bb35-ee05bc7f1ac9/modules/63a3bbc1-bc00-4ee7-a894-a2d91841f30f/lessons/1b369991-f1ca-4d6a-ba8f-e8318d76322f/concepts/63a6f935-dea7-43c2-aaa3-61deea5070c8)
 
-### GitHub
+### GitHub: Remote Repo
 
 - `git remote` show shortname of remote repo
   - `git remote -v` show detailed info
@@ -111,7 +111,17 @@
 - `git pull <remote_shortname> <remote_branch>` fetch and merge with local branch
 - ![fetch and merge](../img/git_fetch.png)
 
+### GitHub: Collaborating with Fork
 
+- `git shortlog` show commits under different collaborator
+  - `git shortlog -s -n` show the number of commits only, sorted by large to small
+- `git log --author="Paul Lewis"` show commits made by Paul Lewis
+- `git log --grep="bug"` 
+- How to contribute?
+  - Check CONTRIBUTION.md
+  - To contribute large effort, use `Issues` to communicate with project maintenance before starting
+  - Create branch with clear name meeting requirement
+  - Create clear, frequent and small commits
 
 ## Part 1 Project: Stroop Effect
 
