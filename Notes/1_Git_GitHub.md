@@ -24,6 +24,7 @@
   - How to start?
     - start from update documentation like README with pull request
     - following the steps of README and try to clarify based on the problems you have
+    - translate documentation into Chinese / English
 
 ### Git: Commands
 
@@ -118,10 +119,30 @@
 - `git log --author="Paul Lewis"` show commits made by Paul Lewis
 - `git log --grep="bug"` 
 - How to contribute?
+  - `Fork` the repo
   - Check CONTRIBUTION.md
   - To contribute large effort, use `Issues` to communicate with project maintenance before starting
   - Create branch with clear name meeting requirement
   - Create clear, frequent and small commits
+  - Pull request
+
+### GitHub: Keep Updated to Remote Repo
+
+- Pull Request
+
+  - ![pull request](../img/git_pull_request.png)
+
+- Fetch and Pull from Upstream
+
+  - ![upstream](../img/git_upstream.png)
+
+- `git rebase` transfer commits onto a new base
+
+  - `git rebase -i HEAD~3` squash last three commits interactively (refer to [YouTube](https://www.youtube.com/watch?time_continue=222&v=cL6ehKtJLUM) for detailed setting)
+    - need force `git push` due to deleting commits
+  - Backup strategy: create backup branch before `rebase` 
+  - ![Rebase](../img/git_rebase.png)
+
 
 ## Part 1 Project: Stroop Effect
 
