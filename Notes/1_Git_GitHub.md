@@ -1,6 +1,6 @@
 # Udacity Data Analyst Nano Degree
 
-## Part 1: GitHub
+## Part 1: Git and GitHub
 
 ### Importance from Recruiter Perspective 
 
@@ -25,15 +25,15 @@
     - start from update documentation like README with pull request
     - following the steps of README and try to clarify based on the problems you have
 
-### Github: Commands
+### Git: Commands
 
-- Create repo
+- Create Repo
   - `git init` initial a folder as a new repo, tracking all modification under it
     - `.git/config` configure only for this repo
   - `git clone <path> [<new dir name>]`
     - cannot create nested repo, so do check your `pwd`
   - `git status`
-- Check commit
+- Review Commits
   - `git log` for commit history
     - `git log --oneline` show only 7 characters of SHA and commit
     - `git log --stat` show files changed for each commit
@@ -42,7 +42,7 @@
     - `git log <7 character of SHA>` start from particular commit
   - `git show` show commit with knowing SHA
     - share all arguments of `git log`
-- Create commit
+- Make Commits
   - `git add` 
     - `git add .` to stage all folders and files
     - `git rm --cached <file>` to unstage
@@ -55,7 +55,7 @@
       - Description: skip a line after message then start
   - `git diff` show changes of unstaged files
   - `.gitignore` file under repo to ignore specified files
-- Create Tag / Branch
+- Develop on Branches
   - `git tag` show tag
     - `git tag -a v1.0 [<SHA>]` create a tag "v1.0" with comments (creator / date / message) for (optional) particular commit
     - `git tag -d "v1.0"` remove tag "v1.0"
@@ -79,6 +79,39 @@
         - you can just commit it and let merge done, but the conflicts will show in your file
       - ![Git Merge](../img/git_merge.png)
     - `git reset --hard HEAD^` cancel merge
+- Undo Changes
+  - `git commit --amend` alter the most -recent commit
+    - `git add` and run `git commit --amend` to add new files into last commit
+  - `git revert <SHA>` create a new commit reversing given commit
+  - Commit Reference
+    - ![Quoting](../img/git_father.png)
+  - `git reset` erases commit
+    - `git reset --mixed HEAD^^` move `HEAD` back to `HEAD^^`, and move changes of `HEAD^` into working dir (default)
+    - `git reset --soft HEAD^^` move changes back to stage
+    - `git reset --hard HEAD^^` delete changes
+    - Backup strategy
+      - before any `reset` operation, `git branch backup` 
+      - after reset, if want to back to the starting point
+        - `git checkout -- index.html` remove uncommited change to file "index.html"
+        - `git merge backup` 
+
+### Git: Shell Setting
+
+1. [Lib of Setting optimized for Git](https://dotfiles.github.io/)
+2. [Udacity style](https://classroom.udacity.com/nanodegrees/nd002-cn-advanced-career/parts/0f916a11-e0ae-4845-bb35-ee05bc7f1ac9/modules/63a3bbc1-bc00-4ee7-a894-a2d91841f30f/lessons/1b369991-f1ca-4d6a-ba8f-e8318d76322f/concepts/63a6f935-dea7-43c2-aaa3-61deea5070c8)
+
+### GitHub
+
+- `git remote` show shortname of remote repo
+  - `git remote -v` show detailed info
+  - `git remote add <shortname> <repo_link>` add in repo link and its shortname
+- `git push <remote_shortname> <remote_branch>` push all your local git info to remote repo
+  - after `push` , `git log` will show the commit location of remote-tracking branch
+- `git fetch <remote_shortname> <remote_branch>` download remote info and move remote-tracking 
+- `git pull <remote_shortname> <remote_branch>` fetch and merge with local branch
+- ![fetch and merge](../img/git_fetch.png)
+
+
 
 ## Part 1 Project: Stroop Effect
 
