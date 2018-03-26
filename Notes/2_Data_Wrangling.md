@@ -60,3 +60,34 @@
 
 ### Data Gather
 
+- Types of Data Source
+
+  - Flat File (like CSV / TSV)
+
+    - human readable / easily edit / good for small dataset
+    - `pd.read_csv(<path>, [sep='<RegEx>', ...])` 
+
+  - HTML from Web Scrapping
+
+    - Elements
+
+      - ```html
+        <p>This is a paragraph.</p>
+        <h1>This is a heading.</h1>
+        <span>This is a span</span>
+        <img src="image.jpg" alt="a picture">
+        ```
+
+    - Trees
+
+      - ```html
+        <!-- Parent div with child h1 and p -->
+        <div>
+            <h1>This is a heading.</h1>
+            <p>This is a paragraph.</p>
+        </div>
+        ```
+
+    - `BeautifulSoup` handle html file     [Sample code](../2_Wrangling_Code/gathering_html.ipynb)
+
+
