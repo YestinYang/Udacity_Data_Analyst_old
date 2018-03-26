@@ -47,4 +47,16 @@
           assert phrase not in df_clean.StartDate.values
       ```
 
-- ​
+- Re-assess and Iteration
+
+- Other Ideas
+
+  - Wrangling and EDA (Exploratory data analysis / Feature Engineering)
+    - Wrangling will not improve your analysis or modeling, but just make it possible
+    - EDA does improve
+  - ETL (Extract-Transform-Load Process)
+    - For IT user / well-structured data / BI use case, while wrangling is for analysts user / any data / exploratory new data 
+    - [Data Wrangling Versus ETL: What’s the Difference?](https://tdwi.org/articles/2017/02/10/data-wrangling-and-etl-differences.aspx)
+
+### Data Gather
+
