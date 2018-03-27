@@ -62,7 +62,7 @@
 
 - Types of Data Source
 
-  - Flat File (like CSV / TSV)
+  - Flat File (like CSV / TSV, structured text file)
 
     - human readable / easily edit / good for small dataset
     - `pd.read_csv(<path>, [sep='<RegEx>', ...])` 
@@ -89,5 +89,30 @@
         ```
 
     - `BeautifulSoup` handle html file     [Sample code](../2_Wrangling_Code/gathering_html.ipynb)
+
+  - HTTP via `requests` 
+
+  - TXT File
+
+    - Encoding and Decoding    [The difference between UTF-8 and Unicode?](http://www.polylab.dk/utf8-vs-unicode.html)
+      - **ASCII / ANSI:** 8-bits per byte stores one character, which from code 32 to 127, while the content of code 128-255 is defined by different standards
+      - **Unicode:** a list of characters with unique numbers (code points)
+        - "Hello" has code points as "U+0048 U+0065 U+006C U+006C U+006F"
+      - **UTF-8 / UTF-16:** encoding algorithm translating info to binary to store on disk
+      - Therefore, when reading a text file, app **decoding** the binary data to number, and translate into character by mapping Unicode
+      - In Python, `str` is Unicode itself, `bytes` and `bytearray` needs to be decoding     [What is the difference between a string and a byte string?](https://stackoverflow.com/questions/6224052/what-is-the-difference-between-a-string-and-a-byte-string)
+
+- Ways of Constructing DataFrame
+
+  - From list of dictionary
+
+    - ```python
+      df_list.append({'title': title,
+                      'score': int(score),
+                      'number_of_ratings': int(num_ratings)})
+      df = pd.DataFrame(df_list, columns = ['title', 'score', 'number_of_ratings'])
+      ```
+
+    -   
 
 
