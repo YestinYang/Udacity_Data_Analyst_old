@@ -102,6 +102,28 @@
       - Therefore, when reading a text file, app **decoding** the binary data to number, and translate into character by mapping Unicode
       - In Python, `str` is Unicode itself, `bytes` and `bytearray` needs to be decoding     [What is the difference between a string and a byte string?](https://stackoverflow.com/questions/6224052/what-is-the-difference-between-a-string-and-a-byte-string)
 
+    - Handle a Batch of TXT File
+
+      - Way 1: `os.listdir` to return list of all files
+      - Way 2: `glob.glob(path, globbing)` to return list of specified files
+
+    - ```python
+      with open(path, encoding='urf-8') as file:  # always specify 'encoding'
+          print (file.readline())  # read the first line of rest
+          print (file.read())  # read all lines of rest    
+      ```
+
+  - Wrapper of API （库）
+
+    - MediaWiki API → wptools 库
+    - Twitter API → tweepy 库
+
+  - JSON
+
+    - JSON Object { } --> Python Dictionary
+    - JSON Array [ ] --> Python List
+    - Both can be nested
+
 - Ways of Constructing DataFrame
 
   - From list of dictionary
@@ -113,6 +135,6 @@
       df = pd.DataFrame(df_list, columns = ['title', 'score', 'number_of_ratings'])
       ```
 
-    -   
+    -   ​
 
 
