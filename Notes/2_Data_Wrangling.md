@@ -124,17 +124,14 @@
     - JSON Array [ ] --> Python List
     - Both can be nested
 
-- Ways of Constructing DataFrame
+- Constructing DataFrame: From list of dictionary 
 
-  - From list of dictionary
+```python
+df_list.append({'title': title,
+                'score': int(score),
+                'number_of_ratings': int(num_ratings)})
+df = pd.DataFrame(df_list, columns = ['title', 'score', 'number_of_ratings'])
+```
 
-    - ```python
-      df_list.append({'title': title,
-                      'score': int(score),
-                      'number_of_ratings': int(num_ratings)})
-      df = pd.DataFrame(df_list, columns = ['title', 'score', 'number_of_ratings'])
-      ```
-
-    -   ​
 
 
