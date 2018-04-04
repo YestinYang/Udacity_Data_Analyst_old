@@ -173,3 +173,25 @@ Ranking from high to low severity:
 
 ### Clean Data
 
+`df.copy()` backup data before cleaning
+
+#### Sequence of Cleaning
+
+1. Missing data (completeness)
+2. Tidiness
+3. Quality
+
+#### Define
+
+- Start with verb to describe pseudo-code
+
+#### Code
+
+- `pandas.Series.str` vectorized string functions
+  - `.replace` 
+  - `.pad` 
+
+#### Test
+
+- Same as assessing
+
