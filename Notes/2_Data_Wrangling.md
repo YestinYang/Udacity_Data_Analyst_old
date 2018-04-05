@@ -190,6 +190,9 @@ Ranking from high to low severity:
 - `pandas.Series.str` vectorized string functions
   - `.replace` 
   - `.pad` 
+  - `split(sep, maxsplit)` 
+- `pandas.melt(df, id_vars, var_name, value_name` 
+- `pandas.merge(left, right, on=[keys], how)` 
 
 #### Test
 
