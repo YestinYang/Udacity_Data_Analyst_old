@@ -124,13 +124,14 @@
   - JSON Object { } --> Python Dictionary
   - JSON Array [ ] --> Python List
   - Both can be nested
+  - [Reading and Writing JSON to a File in Python](http://stackabuse.com/reading-and-writing-json-to-a-file-in-python/) 
 
 - Structural Database via `SQLAlchemy` 
 
 #### Constructing DataFrame
 
 ```python
-# from python list to DataFrame
+# from python list of dict to DataFrame
 df_list.append({'title': title,
                 'score': int(score),
                 'number_of_ratings': int(num_ratings)})
